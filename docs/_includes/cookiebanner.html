@@ -61,9 +61,11 @@
     }
 
     if (readCookie('cookie-notice-option') == 'true') {
+        {% comment %}
         // {% if jekyll.environment == "production" and site.google_analytics %}
         // {% include ga.js %}
         // {% endif %}
+        {% endcomment %}
         gtag('consent', 'update', {
             'ad_user_data': 'granted',
             'ad_personalization': 'granted',
