@@ -203,3 +203,4 @@ dev_env
 Gemfile
 Gemfile.lock
 _site
+docs/pdf/*.pdf
