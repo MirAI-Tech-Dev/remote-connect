@@ -13,6 +13,11 @@ include:
   - CONTRIBUTING.md
   - ISSUE_TEMPLATE.md
   - USAGE.md
+exclude:
+  - pandoc_export.sh
+  - pandoc.css
+  - init.sh
+  - preview.sh
 
 theme: jekyll-theme-tactile
 #theme: jekyll-theme-minimal
