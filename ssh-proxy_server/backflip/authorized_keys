@@ -1,0 +1,18 @@
+# only for tunnels
+
+# matthias@x1-pro
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKWN0VE2saO0Vhcw5LxF2rdQl7q7beW/ikTTTwA6IEDl matthias@x1-pro
+# mirai tech key
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYNvt3ON4Xf6NplwkhVui9YzVsw3fjOIxZxp7GfTmqv matthias@miraitech
+
+# use these options to only create a tunnel
+# command="",restrict,port-forwarding,no-agent-forwarding,permitopen="localhost:2222"
+
+# lxd test machine
+command="",restrict,port-forwarding,no-agent-forwarding,permitopen="localhost:2222" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBcgKNOj/IeWHZ5Q3q87dBiS9EyU70jJi8O8idqoNWhO matthias@my-test
+
+# lxd win11
+command="",restrict,port-forwarding,no-agent-forwarding,permitopen="localhost:2222" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIpsHYqFCC3i2xko9oBDhEGTYw8rei3vkjI6jl1ljx0Y matthias@win11-lxd
+
+# idepad-duet
+command="",restrict,port-forwarding,no-agent-forwarding,permitopen="localhost:2222" ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDj2GXJQYCKEvHXkVkTG8n/hIGQEj0KbTFLUbKGH9wdQFBMYx32fhEtFehF6EI7Potm2bHrNOJF7rVUNJyD12p2TlMlHcqR1oNAZzy4FLo6ekRIjX/n630Mpge71dHHmgqePL+1hmB6NBI8tsTuoLK9+PeQDfxlHbjs3wF6SdRpDQxbqaYHKwIcWG+IOWyRAh2X3qeMdnks4OwM0RydY1jMJIQAS0hun1ZA0LaEXfSOL3RscjgY2yXfxuFnwFclmERr6TflTLN7YIwzXXreJh7wPshdnn6jRUH2vonqD1Cw4MLdoTFiBtXndj6ZxE+rPc+5ZuYzGj23+oEfF4jPEkppsR5S5H820/13YtV8dt8kJtW5sjjLoJAN6s2wCrYl40ss+cI+scFY4TCHi+afWBbu0mDSTmh0DeLMWpc0DPFR5UNlst2QA8JJSe/rr5TRTvMDcKmMpMtA5Xg2RdYbON49dMCNLhRQfov5vydMzdss5GnTTOttoXWygxZbU8BbguE= matthias@ideapad-duet

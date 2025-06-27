@@ -1,0 +1,40 @@
+#### REQUIRED CONFIGURATION ####
+# Full path to backend executable (required, no default)
+#BACKEND="/usr/lib/aarch64-linux-gnu/sshg-fw-iptables"
+#BACKEND="/usr/lib/aarch64-linux-gnu/sshg-fw-hosts"
+BACKEND="/usr/libexec/sshguard/sshg-fw-hosts"
+# Shell command that provides logs on standard output. (optional, no default)
+# Example 1: ssh and sendmail from systemd journal:
+#LOGREADER="LANG=C /bin/journalctl -afb -p info -n1 -o cat SYSLOG_FACILITY=4 SYSLOG_FACILITY=10"
+FILES="/etc/ssh/logs/auth.log"
+#### OPTIONS ####
+# Block attackers when their cumulative attack score exceeds THRESHOLD.
+# Most attacks have a score of 10. (optional, default 30)
+#THRESHOLD=30
+# block immediately
+#THRESHOLD=9
+
+# Block attackers for initially BLOCK_TIME seconds after exceeding THRESHOLD.
+# Subsequent blocks increase by a factor of 1.5. (optional, default 120)
+#BLOCK_TIME=120
+#BLOCK_TIME=1800
+# 24h
+BLOCK_TIME=86400
+# 48h
+#BLOCK_TIME=172800
+
+# Remember potential attackers for up to DETECTION_TIME seconds before
+# resetting their score. (optional, default 1800)
+#DETECTION_TIME=1800
+# 24h
+#DETECTION_TIME=86400
+# 48h
+#DETECTION_TIME=172800
+# 96h
+DETECTION_TIME=345600
+
+# IP addresses listed in the WHITELIST_FILE are considered to be
+# friendlies and will never be blocked.
+WHITELIST_FILE=/etc/sshguard/whitelist
+
+

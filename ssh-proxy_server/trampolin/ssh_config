@@ -1,0 +1,5 @@
+# ssh-config
+### Host to jump to via jmpbox
+#Host behindbeta
+#  HostName behind-jmpbox.example.org
+#  ProxyJump  jmpbox

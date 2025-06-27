@@ -1,0 +1,37 @@
+# host entries
+host remote-connect-proxy
+    ForwardAgent yes
+    hostname remote-connect.miraitech.solutions
+    user backflip
+    port 11111
+
+host remote-connect-login
+    ForwardAgent yes
+    hostname remote-connect.miraitech.solutions
+    user trampolin
+    port 11111
+
+# reverse tunnel connect
+#ssh -J backflip@rev-ssh.jmpbox.duckdns.org:11111 -p 2222 -l matthias localhost
+host rev-proxy-connect
+    ForwardAgent yes
+    hostname localhost
+    #user USER_ON_REMOTE_MACHINE
+    port 2222
+    ProxyJump rev-proxy
+    # since the key is always changing
+    # accept it and never store it
+    StrictHostKeyChecking accept-new
+    UserKnownHostsFile=/dev/null
+
+host remote-connect
+    ForwardAgent yes
+    hostname localhost
+    #user USER_ON_REMOTE_MACHINE
+    port 2222
+    ProxyJump remote-connect-proxy
+    # since the key is always changing
+    # accept it and never store it
+    StrictHostKeyChecking accept-new
+    UserKnownHostsFile=/dev/null
+
