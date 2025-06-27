@@ -19,6 +19,8 @@ exclude:
   - init.sh
   - preview.sh
 
+google_analytics: G-KXV6W5VSP7
+
 theme: jekyll-theme-tactile
 #theme: jekyll-theme-minimal
 #theme: jekyll-theme-midnight
