@@ -1,9 +1,32 @@
 ---
 layout: default
+# for pandoc
+geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
+colorlinks: true
+linkcolor: "blue"
+urlcolor: "blue"
+toccolor: "gray"
+output: pdf_document
+header-includes:
+    - \usepackage{xcolor}
+    - \usepackage{listings}
+    - \lstset{breaklines=true}
+    - \lstset{language=[Motorola68k]Assembler}
+    - \lstset{basicstyle=\small\ttfamily}
+    - \lstset{extendedchars=true}
+    - \lstset{tabsize=2}
+    - \lstset{columns=fixed}
+    - \lstset{showstringspaces=false}
+    - \lstset{frame=trbl}
+    - \lstset{frameround=tttt}
+    - \lstset{framesep=4pt}
+    - \lstset{numbers=left}
+    - \lstset{numberstyle=\tiny\ttfamily}
+    - \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
 ---
 # SSH remote connect behind firewall
 
-![SSH Reverse Proxy Diagram](ssh-reverse-proxy-3.png){: width="80%"}
+![SSH Reverse Proxy Diagram](ssh-reverse-proxy-3.png)
 
 This document outlines the steps to establish an SSH reverse tunnel for remote access to a client machine located behind a firewall, using a jump host (proxy server).
 

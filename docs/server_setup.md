@@ -1,10 +1,33 @@
 ---
 layout: default
+# for pandoc
+geometry: "left=3cm,right=3cm,top=2cm,bottom=2cm"
+colorlinks: true
+linkcolor: "blue"
+urlcolor: "blue"
+toccolor: "gray"
+output: pdf_document
+header-includes:
+    - \usepackage{xcolor}
+    - \usepackage{listings}
+    - \lstset{breaklines=true}
+    - \lstset{language=[Motorola68k]Assembler}
+    - \lstset{basicstyle=\small\ttfamily}
+    - \lstset{extendedchars=true}
+    - \lstset{tabsize=2}
+    - \lstset{columns=fixed}
+    - \lstset{showstringspaces=false}
+    - \lstset{frame=trbl}
+    - \lstset{frameround=tttt}
+    - \lstset{framesep=4pt}
+    - \lstset{numbers=left}
+    - \lstset{numberstyle=\tiny\ttfamily}
+    - \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}}}
 ---
 
 # Remote System Access via SSH (Server Setup Focus)
 
-![SSH Reverse Proxy Diagram](ssh-reverse-proxy-3.png){: width="80%"}
+![SSH Reverse Proxy Diagram](ssh-reverse-proxy-3.png)
 
 This document details the server-side setup for establishing remote SSH access to a client machine via a jump host, using a reverse SSH proxy.
 
